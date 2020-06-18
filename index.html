@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./homepage.css" />
-    <title>Kenzie Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>CSS-SASS Variables Kenzie Academy Activity</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="navbar">
           <li><a href="">Admissions</a></li>
           <li><a href="">Programs</a></li>
           <li><a href="">Pricing</a></li>
@@ -17,53 +18,59 @@
         </ul>
       </nav>
     </header>
-    <section class="video">
-      <h1>Design your tech career</h1>
+  <main class="container">
+    <section class="video-section">
+      <h1><strong>Design your tech career</strong></h1>
       <p>Kenzie Academy is a two-year learning track and apprenticship program.</p>
-      <img src="" alt="" class="video-image" />
+      <img src="./images/playerimage.png" alt="video" class="player"/>
     </section>
-    <section class="testimonials">
+    <section class="testimonials-container">
       <div class="testimonial-1">
         <p>
           "The new Indianapolis-based venture is creating a new type of program
           that combines work and school to teach nontechies...&quot;
         </p>
-        <img src="" alt="" class="testimonial-1-image" />
+        <img src="./images/videoimage.png" alt="notes" class="video1"/>
       </div>
       <div class="testimonial-2">
         <p>
           "...an educational project aimed at adapting the Agility.io model to
           help get Middle America in on the tech boom."
         </p>
-        <img src="" alt="" class="testimonial-2-image" />
+        <img src="./images/videoimage.png" alt="notes" class="video2"/>
       </div>
     </section>
-  <div class="class">
-    <section>
-        <h6 class="jul-month">JUL</h6>
-        <h4 class="ten-date">10</h4>
-        <h2 class="course">Software Engineering</h2>
-        <h3 class="learn-to">Learn to Code</h3>
+    <div class="class">
+      <section>
+          <div class="se-section">
+        <h6 class="jul-month-1">JUL</h6>
+        <h6 class="ten-date-1">10</h4>
+        <h2 class="course-1">Software Engineering</h2>
+        <h3 class="learn-to-1">Learn to Code</h3>
+          </div>
+      </section>
+      <section>
+        <div class="ux-section">
+      <h6 class="jul-month-2">JUL</h6>
+      <h6 class="ten-date-2">10</h4>
+      <h2 class="course-2">User Experience</h2>
+      <h3 class="learn-to-2">Learn to Design</h3>
+        </div>
+      </section>
+      <section>
+      <div class="digital-section">
+    <h6 class="jul-month-3">JUL</h6>
+    <h6 class="ten-date-3">10</h4>
+    <h2 class="course-3">Digital Marketing</h2>
+    <h3 class="learn-to-3">Learn to Market</h3>
+      </div>
     </section>
-    <section>
-      <h6 class="jul-month">JUL</h6>
-      <h4 class="ten-date">10</h4>
-      <h2 class="course">User Experience</h2>
-      <h3 class="learn-to">Learn to Design</h3>
-  </section>
-  <section>
-    <h6 class="jul-month">JUL</h6>
-    <h4 class="ten-date">10</h4>
-    <h2 class="course">Digital Marketing</h2>
-    <h3 class="learn-to">Learn to Market</h3>
- </section>
-</div>
-    <section>
+  </div>
+    </section>
         <div class="programs-question">
         <h2>Not sure which program is right for you&#63</h2>
-        <p class="programs-box">Compare Programs</p>
+        <p>Compare Programs</p>
         </div>
-    </section>
     <section>
         <div class="meet-description">
             <h1 class="meet-title">Meet Kenzie</h1>
@@ -87,16 +94,14 @@
                         Learn about the diverse background of Kenzie students and<br>
                         how they are transforming their lives at Kenzie Academy
                     </p>
-                <img src="" alt="" class="students-video">
+                <img src="./images/playerimage.png" alt="" class="students-video">
             </div>
-            <hr>
             <section class="signup-section">
                 <h2>Let's Chat</h2><br>
                 <p>Kenzie Academy is no small commitment.  If we've piqued<br>
                     your interest today, wed love to keep the conversation going.
                   </p><br>
-                <form class="contact-form" action="">
-                  
+                <form class="contact-form" action="">     
                     <label for="first-name" class="first-name">
                         <input type="text" placeholder="First Name" class="first-name-box"
                         required
@@ -122,5 +127,6 @@
             </section>
         </div>
     </section>
+   </main>
   </body>
 </html>
