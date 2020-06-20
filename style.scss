@@ -13,33 +13,39 @@ $green: #34eb7a;
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
 
+// base styles
+
 * {
   box-sizing: border-box;
 }
 
-.container {
+body {
   display: grid;
-  margin: 0;
   font-family: roboto;
 }
 
 .navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 4em;
-  // width: 100%;
-  // height: 100vh;
-  list-style-type: none;
-  margin-top: 20px;
-  background-color: $grey;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-content: center;
 }
 
-ul > .schedule-tour {
-  flex-direction: row;
+ul {
+  list-style-type: none;
+  display: flex;
+  align-content: center;
+  margin: 1em;
+}
+
+// layout styles
+
+.schedule-tour {
+  // flex-direction: row;
   background-color: $blue;
+  color: $white;
+  &:hover {
+    background-color: $green;
+  }
 }
 
 .schedule-tour:hover {
@@ -47,19 +53,13 @@ ul > .schedule-tour {
 }
 
 li a {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  color: $white;
-  text-decoration: none;
-  padding: 2em;
+  justify-content: flex-end;
+  color: $blue;
+  padding: 1em;
   margin: 1em;
-}
-
-.video-section {
-  background-color: $green;
-  display: grid;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
+  color: $blue;
 }
 
 .player {
@@ -83,15 +83,6 @@ li a {
   background-color: $yellow;
 }
 
-.class {
-  display: flex;
-  justify-content: center;
-  padding: 3em;
-  background-color: $white;
-  border: 1px solid $blue;
-  padding-top: 1rem;
-}
-
 .se-section,
 .ux-section,
 .digital-section {
@@ -100,12 +91,6 @@ li a {
   padding: 1em;
   line-height: 1em;
   border: solid $white;
-}
-
-.programs-question {
-  display: grid;
-  justify-items: center;
-  background-color: $white;
 }
 
 .programs-question > p {
@@ -117,44 +102,22 @@ h4:hover,
   background-color: $green;
 }
 
-.meet-description {
-  background-color: $red;
-  display: grid;
-  justify-items: center;
-  padding-bottom: 2rem;
-}
-
 h4 {
   color: $purple;
 }
 
-h6,
-h2,
-h3 {
-  font-size: 1rem;
+.course-2,
+.course-1,
+.course-3 {
+  font-size: 2rem;
 }
 
-.jul-month-1,
-.jul-month-2,
-.jul-month-3 {
+.date-1,
+.date-2,
+.date-3 {
   border: solid $blue;
   background-color: $blue;
   color: $white;
-  padding: 1em;
-}
-
-.ten-date-1,
-.ten-date-2,
-.ten-date-3 {
-  color: $blue;
-  border: 1px solid $pink;
-  background-color: $green;
-}
-
-.course-1,
-.course-2,
-.course-3 {
-  padding: 1em;
 }
 
 .learn-to-1,
@@ -174,22 +137,37 @@ h3 {
   background-color: $green;
 }
 
-.students {
-  display: grid;
-  justify-items: center;
-  background-color: $grey;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
+img {
+  height: 50px;
+  width: auto;
+}
+
+.members-wrapper {
+  display: flex;
+  flex-flow: row-wrap;
+  padding: 20px;
+}
+
+.members-wrapper > div {
+  box-sizing: border-box;
+  /* max-width: 25%; */
+  padding: 10px;
+  flex: 1 1 25%;
+}
+
+.row-person1,
+.row-person2 {
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 900;
 }
 
 .students-video:hover {
   background-color: $green;
-}
-
-.signup-section {
-  display: grid;
-  justify-items: center;
-  margin-bottom: 5rem;
 }
 
 button {
@@ -202,6 +180,50 @@ button {
 button:hover {
   background-color: $green;
 }
+// block styles
+
+.video-section {
+  background-color: $pink;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+.signup-section {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 5rem;
+}
+
+.students {
+  display: flex;
+  justify-items: center;
+  background-color: $grey;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.meet-description {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 2rem;
+}
+
+.programs-question {
+  display: grid;
+  justify-items: center;
+  background-color: $white;
+}
+
+.class {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  background-color: $white;
+  border: 1px solid $blue;
+  padding-top: 1rem;
+}
 
 // tablet styles
 @media (min-width: 550px) {
@@ -210,31 +232,36 @@ button:hover {
     flex-direction: column;
     justify-items: center;
   }
+
   .navbar,
   li .schedule-tour {
     display: flex;
+    flex-direction: column;
+  }
+  .members > .team-image,
+  .board-image,
+  .mentors-image,
+  .advisors-image {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
   }
 }
-
 // desktop styles
-@media (min-width: 900px) {
+@media (min-width: 650px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    grid-template-columns: 100% auto;
-    grid-template-rows: 30% auto;
   }
-  .navbar,
-  li .schedule-tour {
+
+  .navbar > li {
     display: flex;
-    justify-content: right;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .testimonials-container {
     display: flex;
-    // flex-direction: ;
+    flex-direction: column;
   }
 }
