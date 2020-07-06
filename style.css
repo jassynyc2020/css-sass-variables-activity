@@ -1,84 +1,128 @@
+/* Mobile style */
 @font-face {
   font-family: "roboto";
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
 
-body {
+* {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0 auto;
+}
+
+body,
+html {
+  margin: 0;
   padding: 0;
   font-family: "roboto";
 }
 
-.navbar {
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  margin: 0 auto;
-  padding: 0;
+.nav-list,
+.video-section,
+.class,
+.signup-section,
+.meet-section,
+.programs-question,
+.members-wrapper {
+  display: -ms-grid;
+  display: grid;
+}
+
+.nav-list {
+  text-decoration: none;
+  margin-top: 2em;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-section {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
-  border: 1px solid red;
 }
 
-li > a {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.video-section-title,
+.video-section-description {
+  text-align: center;
 }
 
-.schedule-tour {
+.signup-section,
+.students,
+.meet-section,
+.programs-question {
+  justify-items: center;
+}
+
+.signup-section {
+  margin-bottom: 5rem;
+}
+
+.students {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 3rem;
+}
+
+.programs-question {
+  background-color: #ffffff;
+}
+
+.class {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3em;
+  background-color: #ffffff;
+  border: 1px solid #1e84ea;
+  padding-top: 1rem;
+}
+
+.members-wrapper {
+  padding: 10px;
+}
+
+.nav-list__item {
+  list-style: none;
+  padding: 1em;
+}
+
+.nav-list__item a:link {
+  text-decoration: none;
+}
+
+.video-section-title {
+  width: 100%;
+}
+
+.schedule-button {
   background-color: #1e84ea;
   color: #ffffff;
 }
 
-.schedule-tour:hover {
-  background-color: #34eb7a;
+.schedule-button {
+  border-radius: 5%;
 }
 
 .schedule-tour:hover {
   background-color: #34eb7a;
 }
 
-.player {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: center;
+.video-section-player {
+  width: 100%;
+  height: auto;
 }
 
-.player:hover {
+.video-section-player:hover {
   background-color: #ebd834;
-}
-
-.testimonials-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .testimonial-1,
 .testimonial-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid red;
-}
-
-.video2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,23 +136,31 @@ li > a {
   justify-items: center;
   padding: 1em;
   line-height: 1em;
-  border: solid #ffffff;
+}
+
+.programs-question-description {
+  text-align: center;
 }
 
 .programs-question > p {
   color: #4251f5;
 }
 
-.programs-question > h2 {
+.programs-question-title {
   text-align: center;
+  color: #4251f5;
 }
 
-h4:hover,
-.programs-question > p:hover {
+.programs-question-title > p:hover {
   background-color: #34eb7a;
 }
 
-h4 {
+.meet-title,
+.meet-description {
+  text-align: center;
+}
+
+.read-story-section {
   color: #4251f5;
 }
 
@@ -145,18 +197,6 @@ h4 {
   background-color: #34eb7a;
 }
 
-img {
-  height: 50px;
-  width: auto;
-}
-
-.members-wrapper {
-  display: -ms-grid;
-  display: grid;
-  padding: 10px;
-  border: 1px solid red;
-}
-
 .members-wrapper > div {
   padding: 10px;
   -webkit-box-flex: 1;
@@ -178,32 +218,57 @@ img {
           justify-content: center;
 }
 
-h3 {
-  text-align: center;
-  font-weight: 900;
-}
-
-.team1,
-.team2,
-.team3,
-.team4 {
+.members-team1,
+.members-team2,
+.members-team3,
+.members-team4 {
   display: -ms-grid;
   display: grid;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid red;
+}
+
+.members-title {
+  text-align: center;
 }
 
 .students-video:hover {
   background-color: #34eb7a;
 }
 
+.signup-section-description {
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 2em;
+}
+
+.contact-form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.email-box,
+.phone-number-box {
+  width: 100%;
+}
+
+.contact-form-section > button {
+  justify-items: center;
+}
+
 button {
-  border-radius: 20px;
-  background-color: #4251f5;
-  color: #ffffff;
+  padding: 5px 30px;
+  border: 1px solid;
+  background-color: #ffffff;
+  color: #4251f5;
   margin-top: 1rem;
 }
 
@@ -211,120 +276,22 @@ button:hover {
   background-color: #34eb7a;
 }
 
-.signup-section > p {
-  text-align: center;
-}
-
-.video-section {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid red;
-}
-
-.video-section > h1 {
-  text-align: center;
-}
-
-.signup-section {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  margin-bottom: 5rem;
-}
-
-.students {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.meet-description {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  justify-items: center;
-  width: 300px;
-  margin: 1em;
-}
-
-.programs-question {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  background-color: #ffffff;
-  border: 1px solid red;
-}
-
-.class {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 3em;
-  background-color: #ffffff;
-  border: 1px solid #1e84ea;
-  padding-top: 1rem;
-}
-
-@media (min-width: 550px) {
-  .container {
+@media (min-width: 700px) {
+  .nav-list,
+  .testimonials-container,
+  .testimonials-1,
+  .testimonial-2,
+  .class,
+  .students,
+  .members-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    justify-items: center;
   }
-  .navbar,
-  li .schedule-tour {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .video-section {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid red;
-  }
-  .video-section > h1,
-  p {
-    text-align: center;
-    width: 400px;
-  }
-  .testimonials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .nav-list {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .meet-description {
     display: -ms-grid;
@@ -336,71 +303,36 @@ button:hover {
     width: 500px;
     margin: 1em;
   }
-  .members > .team-image,
-  .board-image,
-  .mentors-image,
-  .advisors-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
 }
 
 @media (min-width: 990px) {
-  .container {
+  .class,
+  .nav-list,
+  .testimonials-container,
+  .testimonials-1,
+  .testimonial-2,
+  .members-wrapper,
+  .row-person1,
+  .row-person2,
+  .members-team1,
+  .members-team2,
+  .members-team3,
+  .members-team4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    justify-items: center;
   }
-  .navbar {
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: fixed;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
-    border: 1px solid red;
+  .nav-list {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .meet-description {
-    display: -ms-grid;
-    display: grid;
-    text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     width: 900px;
     margin: 1em;
   }
-  .testimonials-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .members-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     padding: 10px;
-    border: 1px solid red;
   }
   .members-wrapper > div {
     padding: 10px;
@@ -413,31 +345,24 @@ button:hover {
             flex-direction: column;
   }
   .row-person1,
-  .row-person2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .row-person2,
+  .students {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .team1,
-  .team2,
-  .team3,
-  .team4 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .members-team1,
+  .members-team2,
+  .members-team3,
+  .members-team4 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border: 1px solid red;
   }
   .students {
     display: -ms-grid;
     display: grid;
-    justify-items: center;
     margin-top: 3rem;
     padding-bottom: 2rem;
   }

@@ -1,4 +1,4 @@
-// colors
+/* Mobile style */
 $purple: #4251f5;
 $grey: #9fa0a3;
 $blue: #1e84ea;
@@ -7,75 +7,103 @@ $red: #eb4034;
 $yellow: #ebd834;
 $pink: #de34eb;
 $green: #34eb7a;
-// fonts
 @font-face {
   font-family: "roboto";
   src: url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 }
-
-// base styles
-
-body {
+// Global styles
+* {
   box-sizing: border-box;
-  margin: 0 auto;
+}
+body,
+html {
+  margin: 0;
   padding: 0;
   font-family: "roboto";
 }
-
-.navbar {
-  overflow: hidden;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  position: fixed;
-  margin: 0 auto;
-  padding: 0;
+// block styles
+.nav-list,
+.video-section,
+.class,
+.signup-section,
+.meet-section,
+.programs-question,
+.members-wrapper {
+  display: grid;
+}
+.nav-list {
+  text-decoration: none;
+  margin-top: 2em;
+  list-style: none;
+  align-items: center;
+}
+.video-section {
+  justify-content: center;
   width: 100%;
-  border: 1px solid red;
 }
-
-li > a {
-  flex-direction: row;
+.video-section-title,
+.video-section-description {
+  text-align: center;
 }
-
+.signup-section,
+.students,
+.meet-section,
+.programs-question {
+  justify-items: center;
+}
+.signup-section {
+  margin-bottom: 5rem;
+}
+.students {
+  display: grid;
+  margin-top: 3rem;
+}
+.programs-question {
+  background-color: $white;
+}
+.class {
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  background-color: $white;
+  border: 1px solid $blue;
+  padding-top: 1rem;
+}
+.members-wrapper {
+  padding: 10px;
+}
 // layout styles
-
-.schedule-tour {
-  background-color: $blue;
-  color: $white;
-  &:hover {
-    background-color: $green;
+.nav-list__item {
+  list-style: none;
+  padding: 1em;
+  a:link {
+    text-decoration: none;
   }
 }
-
+.video-section-title {
+  width: 100%;
+}
+.schedule-button {
+  background-color: $blue;
+  color: $white;
+}
+.schedule-button {
+  border-radius: 5%;
+}
 .schedule-tour:hover {
   background-color: $green;
 }
-
-.player {
-  display: flex;
-  justify-self: center;
+.video-section-player {
+  width: 100%;
+  height: auto;
 }
-
-.player:hover {
+.video-section-player:hover {
   background-color: $yellow;
 }
-
-.testimonials-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
 .testimonial-1,
 .testimonial-2 {
   display: flex;
-  border: 1px solid red;
 }
-.video2 {
-  display: flex;
-}
-
 .se-section,
 .ux-section,
 .digital-section {
@@ -83,25 +111,27 @@ li > a {
   justify-items: center;
   padding: 1em;
   line-height: 1em;
-  border: solid $white;
 }
-
+.programs-question-description {
+  text-align: center;
+}
 .programs-question > p {
   color: $purple;
 }
-.programs-question > h2 {
+.programs-question-title {
   text-align: center;
-}
-
-h4:hover,
-.programs-question > p:hover {
-  background-color: $green;
-}
-
-h4 {
   color: $purple;
 }
-
+.programs-question-title > p:hover {
+  background-color: $green;
+}
+.meet-title,
+.meet-description {
+  text-align: center;
+}
+.read-story-section {
+  color: $purple;
+}
 .course-2,
 .course-1,
 .course-3 {
@@ -109,7 +139,6 @@ h4 {
   line-height: 1.6;
   text-align: center;
 }
-
 .date-1,
 .date-2,
 .date-3 {
@@ -117,7 +146,6 @@ h4 {
   background-color: $blue;
   color: $white;
 }
-
 .learn-to-1,
 .learn-to-2,
 .learn-to-3 {
@@ -128,22 +156,10 @@ h4 {
   padding-left: 1em;
   padding-right: 1em;
 }
-
 .learn-to-1:hover,
 .learn-to-2:hover,
 .learn-to-3:hover {
   background-color: $green;
-}
-
-img {
-  height: 50px;
-  width: auto;
-}
-
-.members-wrapper {
-  display: grid;
-  padding: 10px;
-  border: 1px solid red;
 }
 
 .members-wrapper > div {
@@ -151,131 +167,64 @@ img {
   flex: 1 1 25%;
   flex-direction: row;
 }
-
 .row-person1,
 .row-person2 {
   display: flex;
   justify-content: center;
 }
-
-h3 {
-  text-align: center;
-  font-weight: 900;
-}
-
-.team1,
-.team2,
-.team3,
-.team4 {
+.members-team1,
+.members-team2,
+.members-team3,
+.members-team4 {
   display: grid;
   flex-direction: row;
-  border: 1px solid red;
 }
-
+.members-title {
+  text-align: center;
+}
 .students-video:hover {
   background-color: $green;
 }
-
+.signup-section-description {
+  text-align: center;
+}
+.signup-title {
+  font-size: 2em;
+}
+.contact-form-section {
+  display: flex;
+  align-items: center;
+}
+.email-box,
+.phone-number-box {
+  width: 100%;
+}
+.contact-form-section > button {
+  justify-items: center;
+}
 button {
-  border-radius: 20px;
-  background-color: $purple;
-  color: $white;
+  padding: 5px 30px;
+  border: 1px solid;
+  background-color: $white;
+  color: $purple;
   margin-top: 1rem;
 }
-
 button:hover {
   background-color: $green;
 }
-
-.signup-section > p {
-  text-align: center;
-}
-
-// block styles
-
-.video-section {
-  display: grid;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid red;
-}
-
-.video-section > h1 {
-  text-align: center;
-}
-
-.signup-section {
-  display: grid;
-  justify-items: center;
-  margin-bottom: 5rem;
-}
-
-.students {
-  display: flex;
-  justify-items: center;
-  margin-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.meet-description {
-  display: grid;
-  flex-direction: row;
-  justify-items: center;
-  width: 300px;
-  margin: 1em;
-}
-
-.programs-question {
-  display: grid;
-  justify-items: center;
-  background-color: $white;
-  border: 1px solid red;
-}
-
-.class {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  padding: 3em;
-  background-color: $white;
-  border: 1px solid $blue;
-  padding-top: 1rem;
-}
-
-// tablet styles
-@media (min-width: 550px) {
-  .container {
+@media (min-width: 700px) {
+  .nav-list,
+  .testimonials-container,
+  .testimonials-1,
+  .testimonial-2,
+  .class,
+  .students,
+  .members-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
   }
-
-  .navbar,
-  li .schedule-tour {
-    display: flex;
-    flex-direction: column;
+  .nav-list {
+    justify-content: flex-end;
   }
-
-  .video-section {
-    display: grid;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid red;
-  }
-
-  .video-section > h1,
-  p {
-    text-align: center;
-    width: 400px;
-  }
-
-  .testimonials-container {
-    display: flex;
-    flex-direction: column;
-  }
-
   .meet-description {
     display: grid;
     text-align: center;
@@ -285,78 +234,50 @@ button:hover {
     width: 500px;
     margin: 1em;
   }
-  .members > .team-image,
-  .board-image,
-  .mentors-image,
-  .advisors-image {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
 }
-// desktop styles
 @media (min-width: 990px) {
-  .container {
+  .class,
+  .nav-list,
+  .testimonials-container,
+  .testimonials-1,
+  .testimonial-2,
+  .members-wrapper,
+  .row-person1,
+  .row-person2,
+  .members-team1,
+  .members-team2,
+  .members-team3,
+  .members-team4 {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
   }
-
-  .navbar {
-    overflow: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    position: fixed;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
-    border: 1px solid red;
+  .nav-list {
+    justify-content: flex-end;
   }
-
   .meet-description {
-    display: grid;
-    text-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     width: 900px;
     margin: 1em;
   }
-
-  .testimonials-container {
-    display: flex;
-    flex-direction: column;
-  }
-
   .members-wrapper {
-    display: flex;
     padding: 10px;
-    border: 1px solid red;
   }
-
   .members-wrapper > div {
     padding: 10px;
     flex: 1 1 25%;
     flex-direction: column;
   }
-
   .row-person1,
-  .row-person2 {
-    display: flex;
+  .row-person2,
+  .students {
     justify-content: center;
   }
-
-  .team1,
-  .team2,
-  .team3,
-  .team4 {
-    display: flex;
+  .members-team1,
+  .members-team2,
+  .members-team3,
+  .members-team4 {
     flex-direction: column;
-    border: 1px solid red;
   }
   .students {
     display: grid;
-    justify-items: center;
     margin-top: 3rem;
     padding-bottom: 2rem;
   }
