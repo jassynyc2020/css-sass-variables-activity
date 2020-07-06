@@ -193,16 +193,13 @@ html {
 }
 .contact-form-section {
   display: flex;
-  align-items: center;
 }
 .email-box,
 .phone-number-box {
   width: 100%;
 }
-.contact-form-section > button {
-  justify-items: center;
-}
 button {
+  margin: 30%;
   padding: 5px 30px;
   border: 1px solid;
   background-color: $white;
